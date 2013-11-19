@@ -3,9 +3,16 @@ class CalculosController < ApplicationController
   def new
     @calculo = Calculo.new
   end
-
+  
   def create
-    
+    @calculo = Calculo.new(secure_params)
+    if @calculo.valid?
+      
+      flash[:notice] = "Calculado."
+      redirect_to root_path
+    else
+      render :new
+    end
   end
 
   private
