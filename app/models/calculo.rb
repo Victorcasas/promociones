@@ -8,7 +8,7 @@ class Calculo < ActiveRecord::Base
   column :cantidadCA, :integer
 
   
-  validate :cantidadAM, :cantidadAC, :cantidadCA, numericality => { only_integer: true }
+  validate :cantidadAM, :cantidadAC, :cantidadCA, numericality: { only_integer: true }
 
 
   class Item
