@@ -79,9 +79,10 @@ class Calculo < ActiveRecord::Base
     ac.times do |i|
       co.scan Item.new("002", "AC", 5.00)
     end
-    if self.cantidadCA == nil then self.cantidadCA = 0 and self.cantidadCA end
+    if self.cantidadCA == nil then self.cantidadCA = 0 and ca = self.cantidadCA end
     ca.times do |i|
       co.scan Item.new("003", "CA", 11.23)
+    end
     price = co.total
     return price
   end
