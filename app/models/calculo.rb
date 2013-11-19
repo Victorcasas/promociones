@@ -73,19 +73,19 @@ class Calculo < ActiveRecord::Base
     co = Checkout.new(pricing_rules)
    
     am = self.cantidadAM
-    if am != nill
+
       am.times do |i|
         co.scan Item.new("001", "AM", 3.11)
       end
     end
     ac = self.cantidadAC
-    if ac != nill
+
       ac.times do |i|
         co.scan Item.new("002", "AC", 5.00)
       end
     end
     ca = self.cantidadCA
-    if ca != nill
+
       ca.times do |i|
         co.scan Item.new("003", "CA", 11.23)
       end
