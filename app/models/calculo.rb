@@ -71,17 +71,7 @@ class Calculo < ActiveRecord::Base
     pricing_rules << discount_rules.dos_por_uno({ code: "001", limit: 2, discount: 3.11 })
     pricing_rules << discount_rules.descuento_fijo({ code: "002", limit: 3, discount: 0.50 })
     co = Checkout.new(pricing_rules)
-    if self.cantidadAM == nil then self.cantidadAM = 0 end
-    (self.cantidadAM).times do |i|
-      co.scan Item.new("001", "AM", 3.11)
-    end
-    if self.cantidadAC == nil then self.cantidadAC = 0 end
-    (self.cantidadAC).times do |i|
-      co.scan Item.new("002", "AC", 5.00)
-    end
-    if self.cantidadCA == nil then self.cantidadCA = 0 end
-    (self.cantidadCA).times do |i|
-      co.scan Item.new("003", "CA", 11.23)
+
     price = co.total
     return price
   end
