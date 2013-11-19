@@ -10,7 +10,7 @@ class Calculo < ActiveRecord::Base
   validates_presence_of :cantidadAM
   validates_presence_of :cantidadAC
   validates_presence_of :cantidadCA
-  validates_format_of :cantidadAm, :cantidadAC, :cantidadCA, :numericality => { :greater_than_or_equal_to => 0 }
+  validates_format_of :cantidadAM, :cantidadAC, :cantidadCA, :numericality => { :greater_than_or_equal_to => 0 }
 
   class Item
     attr_accessor :code, :name, :price
