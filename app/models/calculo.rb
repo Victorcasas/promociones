@@ -67,19 +67,12 @@ class Calculo < ActiveRecord::Base
   def obtener_calculo
     pricing_rules = []
     discount_rules = DiscountRules.new
-  # Everyday discounts that you don't wanna retype every time
+    # Everyday discounts that you don't wanna retype every time
     pricing_rules << discount_rules.dos_por_uno({ code: "001", limit: 2, discount: 3.11 })
     pricing_rules << discount_rules.descuento_fijo({ code: "002", limit: 3, discount: 0.50 })
     co = Checkout.new(pricing_rules)
-    (1..:cantidadAM).each do |i|
-      co.scan Item.new("001", "AM", 3.11)
-    end
-    (1..:cantidadAC).each do |i|
-      co.scan Item.new("002", "AC", 5.00)
-    end
-    (1..:cantidadCA).each do |i|
-      co.scan Item.new("003", "CA", 11.23)
-    end
-    return co.total
+
+    price = co.total
+    return price
   end
 end
