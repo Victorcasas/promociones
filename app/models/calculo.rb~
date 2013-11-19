@@ -73,24 +73,17 @@ class Calculo < ActiveRecord::Base
     co = Checkout.new(pricing_rules)
    
     am = self.cantidadAM
-
-      am.times do |i|
-        co.scan Item.new("001", "AM", 3.11)
-      end
-
+    am.times do |i|
+      co.scan Item.new("001", "AM", 3.11)
+    end
     ac = self.cantidadAC
-
-      ac.times do |i|
-        co.scan Item.new("002", "AC", 5.00)
-      end
-
+    ac.times do |i|
+      co.scan Item.new("002", "AC", 5.00)
+    end
     ca = self.cantidadCA
-
-
-      ca.times do |i|
-        co.scan Item.new("003", "CA", 11.23)
-      end
-
+    ca.times do |i|
+      co.scan Item.new("003", "CA", 11.23)
+    end
     price = co.total
     return price
   end
