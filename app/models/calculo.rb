@@ -1,4 +1,7 @@
 class Calculo < ActiveRecord::Base
+  require '../discounter'
+  include Discounter
+
   has_no_table
 
   column :cantidadAM, :int
