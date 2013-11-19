@@ -1,0 +1,39 @@
+<% content_for :title do %>Promociones comerciales<% end %>
+<% content_for :description do %>Website created to quickly test comercial discounts algorithms<% end %>
+<section>
+  <img src="http://lorempixel.com/1170/600/people/4">
+</section>
+<section>
+  <div class="column">
+    <h2>Promociones comerciales.</h2>
+  </div>
+  <div class="column">
+    <div class="form-centered">
+        <%= simple_form_for @visitor do |f| %>
+        <%= f.radio_button_tag(:cantidad, 0) %>
+	<%= label_tag(:cantidad_0, 0) %>
+	<%= f.radio_button_tag(:cantidad, 1) %>
+	<%= label_tag(:cantidad_1, 1) %>
+	<%= f.radio_button_tag(:cantidad, 2) %>
+	<%= label_tag(:cantidad_2, 2) %>
+	<%= f.radio_button_tag(:cantidad, 3) %>
+	<%= label_tag(:cantidad_3, 3) %>
+	<%= f.radio_button_tag(:cantidad, 4) %>
+	<%= label_tag(:cantidad_4, 4) %>
+	<%= f.radio_button_tag(:cantidad, 5) %>
+	<%= label_tag(:cantidad_5, 5) %>
+	<%= f.button :submit, "Calcular precio total", :class => "submit" %>
+    <% end %>
+    </div>
+  </div>
+  <div class="column">
+    <div class="form-centered">
+      <%= simple_form_for @visitor do |f| %>
+        <%= f.error_notification %>
+        <%= f.input :email, label: false, :placeholder => 'Your email address...' %>
+        <br/>
+        <%= f.button :submit, "Sign up for the newsletter", :class => "submit" %>
+      <% end %>
+    </div>
+  </div>
+</section>
