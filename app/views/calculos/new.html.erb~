@@ -1,7 +1,7 @@
 <% content_for :title do %>Promociones comerciales<% end %>
 <% content_for :description do %>Website de prueba de algoritmos<% end %>
 <section>
-  <img src="http://lorempixel.com/1170/600/people/4">
+  <img src="http://lorempixel.com/879/450/people/4">
 </section>
 <section>
   <div class="column">
@@ -11,15 +11,15 @@
     <div class="form-centered">
       <%= simple_form_for @calculo do |f| %>
         <%= f.error_notification %>
-        <%= f.input :cantidadAM, label: false, :placeholder => 'Unidades de AM' %>
+        <%= f.input :cantidadAM, label: false, :placeholder => 'Unidades de Agua Mineral' %>
         <br/>
         <%= f.error_notification %>
-        <%= f.input :cantidadAC, label: false, :placeholder => 'Unidades de AC' %>
+        <%= f.input :cantidadAC, label: false, :placeholder => 'Unidades de Aceite' %>
         <br/>
         <%= f.error_notification %>
-        <%= f.input :cantidadCA, label: false, :placeholder => 'Unidades de CA' %>
+        <%= f.input :cantidadCA, label: false, :placeholder => 'Unidades de Café' %>
         <br/>
-        <%= f.button :submit, "Calcular", :class => "submit" %>
+        <%= f.button :submit, "Calcular precio", :class => "submit" %>
       <% end %>
     </div>
   </div>
