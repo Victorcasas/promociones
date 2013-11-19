@@ -5,9 +5,7 @@ class CalculosController < ApplicationController
   end
 
   def create
-    @calculo = Calculo.new(secure_params)
-      flash[:notice] = "Total calculado OK"
-      redirect_to root_path
+    
   end
 
   private
