@@ -3,9 +3,9 @@ class Calculo < ActiveRecord::Base
 
   has_no_table
 
-  column :cantidadAM, :int
-  column :cantidadAC, :int
-  column :cantidadCA, :int
+  column :cantidadAM, :integer
+  column :cantidadAC, :integer
+  column :cantidadCA, :integer
 
   validates_presence_of :cantidadAM
   validates_presence_of :cantidadAC
