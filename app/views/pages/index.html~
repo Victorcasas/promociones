@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta http-equiv="refresh" content="0;url=http://..../home">
-  <title>The page you were looking for was moved to another website</title>
+  <meta http-equiv="refresh" content="0";url="http://promociones-comerciales.herokuapp.com">
+  <title>The page you were looking has been moved to another website</title>
   <style>
   body {
     background-color: #EFEFEF;
