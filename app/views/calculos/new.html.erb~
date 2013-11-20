@@ -6,13 +6,7 @@
 <section>
   <div class="column">
     <h2>Promociones comerciales.</h2>
-    <h3>Agua mineral, su precio es 3,11 €:</h3>
-    <h3>¡Oferta 2x1!</h3>
-    <br>
-    <h3>Aceite, su precio es 5,00 €:</h3>
-    <h3>¡Comprando tres o más, su precio es 4,50 €!</h3>
-    <br>
-    <h3>Café, su precio es 11,23 €.</h3>
+
   </div>
   <div class="column">
     <div class="form-centered">
