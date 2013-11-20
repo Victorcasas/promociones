@@ -7,8 +7,7 @@ class CalculosController < ApplicationController
   def create
     @calculo = Calculo.new(secure_params)
     if @calculo.valid?
-      
-      flash[:notice] = "Calculado."
+      flash[:notice] = "Calculado: #{@calculo.obtener_calculo}"
       redirect_to root_path
     else
       render :new
